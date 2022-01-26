@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rocketmq-demo-common" />
+        <module name="rocketmq-demo-producer" />
+        <module name="rocketmq-demo-consumer" />
+        <module name="rocketmq-demo-nameserver" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="producer" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="producer" options="-parameters" />
+      <module name="rocketmq-demo-common" options="" />
+      <module name="rocketmq-demo-consumer" options="" />
+      <module name="rocketmq-demo-nameserver" options="" />
+      <module name="rocketmq-demo-producer" options="" />
+    </option>
+  </component>
+</project>
