@@ -30,6 +30,13 @@ public class SyncConsumer {
           @Override
           public ConsumeConcurrentlyStatus consumeMessage(
               List<MessageExt> msgs, ConsumeConcurrentlyContext context) {
+            for (MessageExt msg : msgs) {
+              //
+                byte[] body = msg.getBody();
+                String s = new String(body);
+                System.out.println("消息体内容为：" + s);
+            }
+
             System.out.printf(
                 "%s Receive New Messages: %s %n", Thread.currentThread().getName(), msgs);
             // 标记该消息已经被成功消费
