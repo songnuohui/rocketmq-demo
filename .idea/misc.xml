@@ -8,7 +8,6 @@
         <option value="$PROJECT_DIR$/rocketmq-demo-producer/pom.xml" />
         <option value="$PROJECT_DIR$/rocketmq-demo-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/rocket-demo-common/pom.xml" />
-        <option value="$PROJECT_DIR$/rocketmq-demo-nameserver/pom.xml" />
       </list>
     </option>
   </component>

@@ -10,11 +10,11 @@
         <module name="rocketmq-demo-common" />
         <module name="rocketmq-demo-producer" />
         <module name="rocketmq-demo-consumer" />
-        <module name="rocketmq-demo-nameserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="producer" target="1.8" />
+      <module name="rocketmq-demo-nameserver" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -11,6 +11,8 @@ import org.apache.rocketmq.remoting.exception.RemotingException;
 import java.io.UnsupportedEncodingException;
 
 /**
+ * Producer端发送同步消息
+ *
  * @author SongNuoHui
  * @date 2022/1/26 10:22
  */
@@ -28,9 +30,10 @@ public class SyncProducer {
       // 创建消息，并指定Topic，Tag和消息体
       Message msg =
           new Message(
-              "TopicTest" /* Topic */,
+              "TopicTestSync" /* Topic */,
               "TagA" /* Tag */,
-              ("Hello group RocketMQ " + i).getBytes(RemotingHelper.DEFAULT_CHARSET) /* Message body */);
+              ("Hello group RocketMQ 5 " + i)
+                  .getBytes(RemotingHelper.DEFAULT_CHARSET) /* Message body */);
       // 发送消息到一个Broker
       SendResult sendResult = producer.send(msg);
       // 通过sendResult返回消息是否成功送达
