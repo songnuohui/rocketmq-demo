@@ -13,6 +13,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * 顺序消息生产
+ *
  * @author SongNuoHui
  * @date 2022/2/10 18:03
  */
@@ -36,7 +38,7 @@ public class OrderMessageProducer {
     for (int i = 0; i < 10; i++) {
       // 加个时间前缀
       String body = dateStr + " Hello RocketMQ " + orderList.get(i);
-      Message msg = new Message("TopicTest", tags[i % tags.length], "KEY" + i, body.getBytes());
+      Message msg = new Message("TopicTestOrder", tags[i % tags.length], "KEY" + i, body.getBytes());
 
       SendResult sendResult =
           producer.send(
